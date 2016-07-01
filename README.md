@@ -46,7 +46,7 @@ Note that you may need to build your project once to parse and build the Quantit
 
 ## Unit declaration ##
 
-The fundamental type in the module is Quantity<T>, where T is a DimensionalUnit type. Quantity stores both a numerical value and the corresponding dimensional unit for that value. Dimensional units belong to specific classifications, so a Quantity using a LengthUnit can't be interchanged with one using a TimeUnit.
+The fundamental type in the module is `Quantity<T>`, where T is a DimensionalUnit type. Quantity stores both a numerical value and the corresponding dimensional unit for that value. Dimensional units belong to specific classifications, so a Quantity using a LengthUnit can't be interchanged with one using a TimeUnit.
 
 To declare a Quantity, you use syntax similar to the following:
 
