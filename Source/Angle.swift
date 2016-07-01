@@ -1,3 +1,5 @@
+import Foundation
+
 public typealias Angle = Quantity<AngleUnit>
 
 public enum AngleUnit: DimensionalUnitSimpleScaled {
@@ -12,4 +14,16 @@ public enum AngleUnit: DimensionalUnitSimpleScaled {
             }
         }
     }
+}
+
+public func sin(_ angle:Angle) -> Double {
+    return sin(angle.value(in:.radians))
+}
+
+public func cos(_ angle:Angle) -> Double {
+    return cos(angle.value(in:.radians))
+}
+
+public func tan(_ angle:Angle) -> Double {
+    return tan(angle.value(in:.radians))
 }

@@ -12,4 +12,11 @@ class Angle_Tests: XCTestCase {
         let angle1 = 180.degrees + Double.pi.radians
         XCTAssertEqualWithAccuracy(angle1.value(in:.degrees), 360.0, accuracy:0.01)
     }
+    
+    func testTrigonometry() {
+        XCTAssertEqualWithAccuracy(sin(0.degrees), 0.0, accuracy:0.01)
+        XCTAssertEqualWithAccuracy(sin(90.degrees), 1.0, accuracy:0.01)
+        XCTAssertEqualWithAccuracy(cos(0.degrees), 1.0, accuracy:0.01)
+        XCTAssertEqualWithAccuracy(cos(90.degrees), 0.0, accuracy:0.01)
+    }
 }
