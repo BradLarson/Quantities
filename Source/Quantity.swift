@@ -43,9 +43,21 @@ public func *<T>(lhs:Quantity<T>, rhs:Double) -> Quantity<T> {
     return Quantity(lhs.value * rhs, unit:lhs.unit)
 }
 
+public func /<T>(lhs:Quantity<T>, rhs:Double) -> Quantity<T> {
+    return Quantity(lhs.value / rhs, unit:lhs.unit)
+}
+
 public func <<T>(lhs:Quantity<T>, rhs:Quantity<T>) -> Bool {
     return lhs.value < rhs.value(in:lhs.unit)
 }
 public func ==<T>(lhs:Quantity<T>, rhs:Quantity<T>) -> Bool {
     return lhs.value == rhs.value(in:lhs.unit)
+}
+
+public func abs<T>(_ value:Quantity<T>) -> Quantity<T> {
+    return Quantity(abs(value.value(in:value.unit)), unit:value.unit)
+}
+
+public prefix func -<T>(_ value:Quantity<T>) -> Quantity<T> {
+    return Quantity(-(value.value(in:value.unit)), unit:value.unit)
 }

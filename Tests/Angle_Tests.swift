@@ -6,6 +6,9 @@ class Angle_Tests: XCTestCase {
         let angle1 = Angle(180.0, unit:.degrees)
         XCTAssertEqualWithAccuracy(angle1.value(in:.radians), .pi, accuracy:0.01)
         XCTAssertEqualWithAccuracy(angle1.value(in:.degrees), 180.0, accuracy:0.01)
+
+        let angle2 = Angle(.pi / 2.0, unit:.radians)
+        XCTAssertEqualWithAccuracy(angle2.value(in:.degrees), 90.0, accuracy:0.01)
     }
     
     func testArithmetic() {
