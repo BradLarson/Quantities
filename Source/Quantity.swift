@@ -47,6 +47,10 @@ public func /<T>(lhs:Quantity<T>, rhs:Double) -> Quantity<T> {
     return Quantity(lhs.value / rhs, unit:lhs.unit)
 }
 
+public func /<T>(lhs:Quantity<T>, rhs:Quantity<T>) -> Double {
+    return lhs.value / rhs.value(in:lhs.unit)
+}
+
 public func <<T>(lhs:Quantity<T>, rhs:Quantity<T>) -> Bool {
     return lhs.value < rhs.value(in:lhs.unit)
 }

@@ -15,8 +15,9 @@ public struct VelocityUnit: DimensionalUnitSimpleScaled {
         }
     }
     
-    static let metersPerSecond = VelocityUnit(numerator:.meters, denominator:.seconds)
-    static let milesPerHour = VelocityUnit(numerator:.miles, denominator:.hours)
+    public static let metersPerSecond = VelocityUnit(numerator:.meters, denominator:.seconds)
+    public static let milesPerHour = VelocityUnit(numerator:.miles, denominator:.hours)
+    public static let kilometersPerHour = VelocityUnit(numerator:.kilometers, denominator:.hours)
 }
 
 extension VelocityUnit: CustomStringConvertible {
@@ -30,5 +31,10 @@ public func == (lhs:VelocityUnit, rhs:VelocityUnit) -> Bool {
 }
 
 public func /(lhs:Distance, rhs:Time) -> Velocity {
-    return Quantity(lhs.value(in:lhs.unit) / rhs.value(in:rhs.unit), unit:VelocityUnit(numerator:lhs.unit, denominator:rhs.unit))
+    return Velocity(lhs.value(in:lhs.unit) / rhs.value(in:rhs.unit), unit:VelocityUnit(numerator:lhs.unit, denominator:rhs.unit))
 }
+
+public func *(lhs:Velocity, rhs:Time) -> Distance {
+    return Distance(rhs.value(in:lhs.unit.denominator) * lhs.value(in:lhs.unit), unit:lhs.unit.numerator)
+}
+
