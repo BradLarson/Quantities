@@ -24,7 +24,7 @@ public enum DistanceUnit: DimensionalUnitSimpleScaled {
                 case inches: return 0.0254
                 case feet: return 0.3048
                 case yards: return 0.9144
-                case miles: return 1609.34
+                case miles: return 1609.344
             }
         }
     }

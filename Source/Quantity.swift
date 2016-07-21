@@ -1,5 +1,6 @@
 //  This is based on Foundation's new Measurement and Unit types in 10.12 and iOS 10.
-//  I'm going with the DimensionedNumber and DimensionalUnit identifiers to avoid a conflict between these implementations. I'm diverging a bit from their API and needed something I could use on older OS versions.
+//  I'm going with the Quantity and DimensionalUnit identifiers to avoid a conflict between these implementations.
+//  I'm diverging a bit from their API and needed something I could use on older OS versions.
 
 public struct Quantity<T:DimensionalUnit>: Comparable {
     public let unit:T

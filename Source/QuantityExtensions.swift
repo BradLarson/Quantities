@@ -1,7 +1,7 @@
 import Foundation
 
 extension Double {
-    // Length
+    // Distance
     public var microns:Distance { get { return Distance(self, unit:.microns) } }
     public var millimeters:Distance { get { return Distance(self, unit:.millimeters) } }
     public var centimeters:Distance { get { return Distance(self, unit:.centimeters) } }

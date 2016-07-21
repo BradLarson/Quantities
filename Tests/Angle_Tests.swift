@@ -21,5 +21,12 @@ class Angle_Tests: XCTestCase {
         XCTAssertEqualWithAccuracy(sin(90.degrees), 1.0, accuracy:0.01)
         XCTAssertEqualWithAccuracy(cos(0.degrees), 1.0, accuracy:0.01)
         XCTAssertEqualWithAccuracy(cos(90.degrees), 0.0, accuracy:0.01)
+        XCTAssertEqualWithAccuracy(tan(0.degrees), 0.0, accuracy:0.01)
+        XCTAssertEqualWithAccuracy(tan(45.degrees), 1.0, accuracy:0.01)
+    }
+    
+    func testSuffixes() {
+        XCTAssertEqualWithAccuracy(10.degrees.value(in:.degrees), 10.0, accuracy:0.0001)
+        XCTAssertEqualWithAccuracy(10.radians.value(in:.radians), 10.0, accuracy:0.0001)
     }
 }
