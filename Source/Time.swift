@@ -11,12 +11,12 @@ public enum TimeUnit: DimensionalUnitSimpleScaled {
     public var multiplierToBasis:Double {
         get {
             switch self {
-                case nanoseconds: return  0.000000001
-                case microseconds: return 0.000001
-                case milliseconds: return 0.001
-                case seconds: return 1.0
-                case minutes: return 60.0
-                case hours: return 3600.0
+                case .nanoseconds: return  0.000000001
+                case .microseconds: return 0.000001
+                case .milliseconds: return 0.001
+                case .seconds: return 1.0
+                case .minutes: return 60.0
+                case .hours: return 3600.0
             }
         }
     }
@@ -24,12 +24,12 @@ public enum TimeUnit: DimensionalUnitSimpleScaled {
     var singularDescription:String {
         get {
             switch self {
-                case nanoseconds: return "nanosecond"
-                case microseconds: return "microsecond"
-                case milliseconds: return "millisecond"
-                case seconds: return "second"
-                case minutes: return "minute"
-                case hours: return "hour"
+                case .nanoseconds: return "nanosecond"
+                case .microseconds: return "microsecond"
+                case .milliseconds: return "millisecond"
+                case .seconds: return "second"
+                case .minutes: return "minute"
+                case .hours: return "hour"
             }
         }
     }

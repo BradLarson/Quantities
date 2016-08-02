@@ -9,8 +9,8 @@ public enum AngleUnit: DimensionalUnitSimpleScaled {
     public var multiplierToBasis:Double {
         get {
             switch self {
-                case degrees: return .pi / 180.0
-                case radians: return 1.0
+                case .degrees: return .pi / 180.0
+                case .radians: return 1.0
             }
         }
     }

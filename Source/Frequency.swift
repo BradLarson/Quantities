@@ -8,9 +8,9 @@ public enum FrequencyUnit: DimensionalUnitSimpleScaled {
     public var multiplierToBasis:Double {
         get {
             switch self {
-                case hertz: return 1.0
-                case kilohertz: return 1000.0
-                case megahertz: return 1000000.0
+                case .hertz: return 1.0
+                case .kilohertz: return 1000.0
+                case .megahertz: return 1000000.0
             }
         }
     }
