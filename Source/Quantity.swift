@@ -4,16 +4,16 @@
 
 public struct Quantity<T:DimensionalUnit>: Comparable {
     public let unit:T
-    private let value:Double
+    internal let internalValue:Double
     
     public init(_ value:Double, unit:T) {
-        self.value = value
+        self.internalValue = value
         self.unit = unit
     }
     
     public func value(in unit:T) -> Double {
-        guard (unit != self.unit) else {return value}
-        return unit.convertFromBasis(self.unit.convertToBasis(value))
+        guard (unit != self.unit) else {return internalValue}
+        return unit.convertFromBasis(self.unit.convertToBasis(internalValue))
     }
     
     public func converting(to unit:T) -> Quantity<T> {
@@ -29,34 +29,34 @@ extension Quantity: CustomStringConvertible {
 }
 
 public func +<T>(lhs:Quantity<T>, rhs:Quantity<T>) -> Quantity<T> {
-    return Quantity(lhs.value + rhs.value(in:lhs.unit), unit:lhs.unit)
+    return Quantity(lhs.internalValue + rhs.value(in:lhs.unit), unit:lhs.unit)
 }
 
 public func -<T>(lhs:Quantity<T>, rhs:Quantity<T>) -> Quantity<T> {
-    return Quantity(lhs.value - rhs.value(in:lhs.unit), unit:lhs.unit)
+    return Quantity(lhs.internalValue - rhs.value(in:lhs.unit), unit:lhs.unit)
 }
 
 public func *<T>(lhs:Double, rhs:Quantity<T>) -> Quantity<T> {
-    return Quantity(lhs * rhs.value, unit:rhs.unit)
+    return Quantity(lhs * rhs.internalValue, unit:rhs.unit)
 }
 
 public func *<T>(lhs:Quantity<T>, rhs:Double) -> Quantity<T> {
-    return Quantity(lhs.value * rhs, unit:lhs.unit)
+    return Quantity(lhs.internalValue * rhs, unit:lhs.unit)
 }
 
 public func /<T>(lhs:Quantity<T>, rhs:Double) -> Quantity<T> {
-    return Quantity(lhs.value / rhs, unit:lhs.unit)
+    return Quantity(lhs.internalValue / rhs, unit:lhs.unit)
 }
 
 public func /<T>(lhs:Quantity<T>, rhs:Quantity<T>) -> Double {
-    return lhs.value / rhs.value(in:lhs.unit)
+    return lhs.internalValue / rhs.value(in:lhs.unit)
 }
 
 public func <<T>(lhs:Quantity<T>, rhs:Quantity<T>) -> Bool {
-    return lhs.value < rhs.value(in:lhs.unit)
+    return lhs.internalValue < rhs.value(in:lhs.unit)
 }
 public func ==<T>(lhs:Quantity<T>, rhs:Quantity<T>) -> Bool {
-    return lhs.value == rhs.value(in:lhs.unit)
+    return lhs.internalValue == rhs.value(in:lhs.unit)
 }
 
 public func abs<T>(_ value:Quantity<T>) -> Quantity<T> {
