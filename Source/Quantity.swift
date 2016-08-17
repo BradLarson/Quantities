@@ -24,7 +24,7 @@ public struct Quantity<T:DimensionalUnit>: Comparable {
 
 extension Quantity: CustomStringConvertible {
     public var description: String {
-        return "\(self.value) \(self.unit)"
+        return "\(self.internalValue) \(self.unit)"
     }
 }
 
