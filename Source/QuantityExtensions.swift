@@ -7,6 +7,7 @@ extension Double {
     public var centimeters:Distance { get { return Distance(self, unit:.centimeters) } }
     public var meters:Distance { get { return Distance(self, unit:.meters) } }
     public var miles:Distance { get { return Distance(self, unit:.miles) } }
+    public var inches:Distance { get { return Distance(self, unit:.inches) } }
 
     // Time
     public var milliseconds:Time { get { return Time(self, unit:.milliseconds) } }

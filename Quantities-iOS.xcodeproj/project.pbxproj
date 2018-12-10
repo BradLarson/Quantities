@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC13FE2E21B99916000EEF29 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC13FE2D21B99916000EEF29 /* Area.swift */; };
+		BC13FE3021B9993E000EEF29 /* Area_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC13FE2F21B9993E000EEF29 /* Area_Tests.swift */; };
+		BC54247121BF00C6008D80C9 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC13FE2D21B99916000EEF29 /* Area.swift */; };
 		BC6CD2FC1D26E01D001F93E3 /* Quantity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2BBA21D26CA5900F10C1F /* Quantity.swift */; };
 		BC6CD2FD1D26E020001F93E3 /* QuantityExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2BBA31D26CA5900F10C1F /* QuantityExtensions.swift */; };
 		BC6CD2FE1D26E022001F93E3 /* DimensionalUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2BBA71D26CA6C00F10C1F /* DimensionalUnit.swift */; };
@@ -43,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BC13FE2D21B99916000EEF29 /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Area.swift; path = Source/Area.swift; sourceTree = "<group>"; };
+		BC13FE2F21B9993E000EEF29 /* Area_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Area_Tests.swift; path = Tests/Area_Tests.swift; sourceTree = SOURCE_ROOT; };
 		BC6CD3041D26E053001F93E3 /* Distance_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Distance_Tests.swift; path = Tests/Distance_Tests.swift; sourceTree = SOURCE_ROOT; };
 		BC6CD3051D26E053001F93E3 /* Frequency_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Frequency_Tests.swift; path = Tests/Frequency_Tests.swift; sourceTree = SOURCE_ROOT; };
 		BC6CD3061D26E053001F93E3 /* Time_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Time_Tests.swift; path = Tests/Time_Tests.swift; sourceTree = SOURCE_ROOT; };
@@ -120,6 +125,7 @@
 				BC6CD3051D26E053001F93E3 /* Frequency_Tests.swift */,
 				BC6CD3061D26E053001F93E3 /* Time_Tests.swift */,
 				BC6CD3071D26E053001F93E3 /* Velocity_Tests.swift */,
+				BC13FE2F21B9993E000EEF29 /* Area_Tests.swift */,
 				BCD2BB911D26C8F600F10C1F /* Info.plist */,
 			);
 			name = Tests;
@@ -130,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				BCD2BBA71D26CA6C00F10C1F /* DimensionalUnit.swift */,
+				BC13FE2D21B99916000EEF29 /* Area.swift */,
 				BCD2BBA61D26CA6C00F10C1F /* Angle.swift */,
 				BCD2BBA81D26CA6C00F10C1F /* Distance.swift */,
 				BCD2BBA91D26CA6C00F10C1F /* Frequency.swift */,
@@ -269,6 +276,7 @@
 				BCD2BBAF1D26CA6C00F10C1F /* Frequency.swift in Sources */,
 				BCD2BBA41D26CA5900F10C1F /* Quantity.swift in Sources */,
 				BCD2BBAD1D26CA6C00F10C1F /* DimensionalUnit.swift in Sources */,
+				BC13FE2E21B99916000EEF29 /* Area.swift in Sources */,
 				BCD2BBAE1D26CA6C00F10C1F /* Distance.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +289,7 @@
 				BC6CD2FC1D26E01D001F93E3 /* Quantity.swift in Sources */,
 				BC6CD2FF1D26E024001F93E3 /* Angle.swift in Sources */,
 				BC6CD3001D26E026001F93E3 /* Distance.swift in Sources */,
+				BC13FE3021B9993E000EEF29 /* Area_Tests.swift in Sources */,
 				BC6CD30F1D26E068001F93E3 /* Velocity_Tests.swift in Sources */,
 				BC6CD30E1D26E066001F93E3 /* Time_Tests.swift in Sources */,
 				BCD2BB9B1D26C92600F10C1F /* QuantityTests.swift in Sources */,
@@ -290,6 +299,7 @@
 				BC6CD3021D26E02B001F93E3 /* Time.swift in Sources */,
 				BCD2BB9A1D26C92400F10C1F /* Angle_Tests.swift in Sources */,
 				BC6CD3031D26E02D001F93E3 /* Velocity.swift in Sources */,
+				BC54247121BF00C6008D80C9 /* Area.swift in Sources */,
 				BC6CD2FE1D26E022001F93E3 /* DimensionalUnit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
