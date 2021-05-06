@@ -1,3 +1,4 @@
+import Quantities
 import XCTest
 
 class Time_Tests: XCTestCase {

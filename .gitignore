@@ -1,4 +1,5 @@
 # Exclude the build directory
+.build
 build/*
 examples/FilterShowcase/build*
  

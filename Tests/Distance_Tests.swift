@@ -1,3 +1,4 @@
+import Quantities
 import XCTest
 
 class Distance_Tests: XCTestCase {

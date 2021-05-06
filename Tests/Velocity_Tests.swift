@@ -1,3 +1,4 @@
+import Quantities
 import XCTest
 
 class Velocity_Tests: XCTestCase {

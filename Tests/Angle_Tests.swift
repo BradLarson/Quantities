@@ -1,3 +1,4 @@
+import Quantities
 import XCTest
 
 class Angle_Tests: XCTestCase {

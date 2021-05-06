@@ -1,22 +1,13 @@
+// swift-tools-version:4.0
+import PackageDescription
+
 let package = Package(
-  name: "Quantities",
-  targets: [
-    Target(name: "Quantities")
- ],
-#if os(OSX)
-  exclude: [
-    "iOS",
-    "Linux"
-  ])
-#elseif os(iOS)
-  exclude: [
-    "Linux",
-    "Mac"
-  ])
-#elseif os(Linux)
-  exclude: [
-    "iOS",
-    "Mac"
-  ])
-#endif
-  
+    name: "Quantities",
+    products: [
+        .library(name: "Quantities", targets: ["Quantities"]),
+    ],
+    targets: [
+        .target(name: "Quantities", path: "Source"),
+        .testTarget(name: "QuantitiesTests", dependencies: ["Quantities"], path: "Tests"),
+    ]
+)
