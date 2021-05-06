@@ -27,7 +27,7 @@ extension Double {
 
 #if !os(Linux)
 public extension Thread {
-    public class func sleep(forTimeInterval ti:Time) {
+    class func sleep(forTimeInterval ti:Time) {
         Thread.sleep(forTimeInterval:ti.value(in:.seconds))
     }
 }
